@@ -6,4 +6,23 @@ The intention is to upload this REST API to a DOCKER container and to be able to
 - The main.py file is used to start the application: uvicorn main:app --reload
 - Check the Docker files 
 
+## Database Conection
+
+In the db.py file, comment or uncomment to use the desired connection (PostgreSql or SQLite).
+
+#PostgreSQL
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password@db:5432/metrobus" #Crea o lee la base de datos
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL #Se crea la comunicación con la base de datos
+) 
+
+#SQLite
+# SQLALCHEMY_DATABASE_URL = "sqlite:///"+file_path #Crea o lee la base de datos
+# engine = create_engine(
+#     SQLALCHEMY_DATABASE_URL #Se crea la comunicación con la base de datos
+# , connect_args={"check_same_thread": False})
+
+
+
+
 ![listado_unidades](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/unidades.JPG)
