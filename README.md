@@ -11,11 +11,13 @@ The intention is to upload this REST API to a DOCKER container and to be able to
 In the db.py file, comment or uncomment to use the desired connection (PostgreSql or SQLite).
 
 ###PostgreSQL
+
 SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password@db:5432/metrobus" 
 engine = create_engine(SQLALCHEMY_DATABASE_URL) 
 
 
 ###SQLite
+
 file_path = os.path.abspath(os.getcwd())+"\metrobus.db"
 SQLALCHEMY_DATABASE_URL = "sqlite:///"+file_path #Crea o lee la base de datos
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
