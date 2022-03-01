@@ -43,7 +43,7 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 ## Ejecución del software ⚙️
 ### Local
-* Ejecutar el comando en cmd o terminal [uvicorn main:app --reload]
+* Ejecutar el comando en cmd o terminal [uvicorn main:app --reload] Archivo principal [main.py](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/main.py)
 * Posteriormente acceder a la url por defecto [127.0.0.1:8000]
 ### Docker
 * Si ha realizado la imagen Docker ejecutar el contenedor creado "micro-service-fastapi" y posteriormente abrir el navegador en la URL: [localhost:5000]
