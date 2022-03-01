@@ -13,7 +13,7 @@ Para observar como se llevo a cabo el procedimiento para la solución, se ha rea
 
 * Descargar o clonar el repositorio donde se desee: **git clone https://github.com/vicogarcia16/Unidades_Metrobus**
 
-## Bases de datos :toolbox:
+## Bases de datos :dvd:
 
 Por defecto y de manera local la API trabaja con la base de datos SQLite [metrobus.db](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/metrobus.db). Sin embargo, si se deseará trabajar en Docker, comentar sus lineas y descomentar las lineas correspondientes de PostgreSQL en el archivo [db.py](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/config/db.py).
 
