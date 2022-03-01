@@ -16,7 +16,7 @@ cur = sql.cursor()
 
 #Creamos la tabla si no existe
 cur.execute('''CREATE TABLE IF NOT EXISTS unidades
-            (posicion integer primary key autoincrement, 
+            (id integer primary key autoincrement, 
             date_updated text, vehicle_id integer, vehicle_label text
             vehicle_current_status integer, position_latitude real, position_longitude real,
             geo_point text, position_speed integer, position_odometer integer,

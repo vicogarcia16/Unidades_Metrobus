@@ -7,16 +7,16 @@ import os
 file_path = os.path.abspath(os.getcwd())+"\metrobus.db"
 
 #PostgreSQL
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password@db:5432/metrobus" #Crea o lee la base de datos
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL #Se crea la comunicación con la base de datos
-) 
-
-#SQLite
-# SQLALCHEMY_DATABASE_URL = "sqlite:///"+file_path #Crea o lee la base de datos
+# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password@db:5432/metrobus" #Crea o lee la base de datos
 # engine = create_engine(
 #     SQLALCHEMY_DATABASE_URL #Se crea la comunicación con la base de datos
-# , connect_args={"check_same_thread": False})
+# ) 
+
+#SQLite
+SQLALCHEMY_DATABASE_URL = "sqlite:///"+file_path #Crea o lee la base de datos
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL #Se crea la comunicación con la base de datos
+, connect_args={"check_same_thread": False})
 
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine) #Se un objeto de conexión
