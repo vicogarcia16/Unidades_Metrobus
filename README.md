@@ -5,15 +5,15 @@ Creación e implementación de una API REST que muestra datos referentes a las u
 En la siguiente imagen se muestran las funciones o peticiones GET con las que cuenta esta API:
 ![Listado de funciones](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/diagrama/listado_peticiones_GET.JPG)
 
-## Diagrama de solución
+## Diagrama de solución :printer:
 
 Para observar como se llevo a cabo el procedimiento para la solución, se ha realizado un diagrama en el cual se explican las herramientas y pasos que se tomaron para dicho fin. Este se encuentra en la carpeta [diagrama](https://github.com/vicogarcia16/Unidades_Metrobus/tree/master/diagrama) de este repositorio contando con un archivo PDF o JPEG.
 
-## Pre requisitos
+## Pre requisitos 	:pushpin:
 
 * Descargar o clonar el repositorio donde se desee: **git clone https://github.com/vicogarcia16/Unidades_Metrobus**
 
-## Bases de datos
+## Bases de datos :toolbox:
 
 Por defecto y de manera local la API trabaja con la base de datos SQLite [metrobus.db](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/metrobus.db). Sin embargo, si se deseará trabajar en Docker, comentar sus lineas y descomentar las lineas correspondientes de PostgreSQL en el archivo [db.py](https://github.com/vicogarcia16/Unidades_Metrobus/blob/master/config/db.py).
 
@@ -48,8 +48,9 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 ### Docker
 * Si ha realizado la imagen Docker ejecutar el contenedor creado "micro-service-fastapi" y posteriormente abrir el navegador en la URL: [localhost:5000]
 
-## Demo
+## Video Demo :film_strip:
 
+[![Alt text](https://img.youtube.com/vi/6EVTI3JVqFk/0.jpg)](https://www.youtube.com/watch?v=6EVTI3JVqFk)
 
 ## Construido con 🛠️
 
