@@ -32,7 +32,7 @@ def get_db():
 #Ruta que utiliza un metodo get para solicitar peticiones al servidor
 #En este caso retorna la cantidad de unidades disponibles en la tabla Unidades
 @app.get('/unidades/cantidad', tags=["Unidades"])
-async def cantidad_de_unidades_disponibles(db: Session = Depends(get_db)):#Función que recibe la sesión actual con la bd
+def cantidad_de_unidades_disponibles(db: Session = Depends(get_db)):#Función que recibe la sesión actual con la bd
     contador_unidades = unidades.get_contar_unidades(db=db) #Función que desarrolla el proceso de query
     return f'Cantidad de unidades = {contador_unidades}'#Retonrna la cantidad de unidades
 
