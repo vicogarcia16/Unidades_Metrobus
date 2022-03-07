@@ -1,5 +1,5 @@
 #Desarrollado por Víctor García
-
+import uvicorn
 from fastapi import Depends,HTTPException, FastAPI #Libreria de FastAPI que importa lo necesario
 from typing import List #Libreria para el tipo de dato Lista
 from sqlalchemy.orm import Session #Libreria que nos permite conectar con la base de datos
@@ -45,7 +45,7 @@ def unidades_disponibles(skip: int = 0, limit: int = 207, db: Session = Depends(
     if limit > contador_unidades:#Si el limite del rango solicitado por el usuario es mayor que la cantidad
         raise HTTPException(status_code=400, detail = f"¡Has sobrepasado el limite de {contador_unidades} datos existentes!")#Se envia un mensaje de error
     #Funcion que desarrolla la consulta para listar las unidades dependiendo del rango deseado
-    listar_unidades = unidades.get_unidades(db=db, skip=skip, limit=contador_unidades)
+    listar_unidades = unidades.get_unidades(db=db, skip=skip, limit=limit)
     return  listar_unidades #Retorna el listado de unidades
 
 #Ruta que utiliza un metodo get para solicitar peticion retornando una unidad por etiqueta vehicular
@@ -114,3 +114,5 @@ def alcaldias_disponibles(skip: int = 0, limit: int = 11, db: Session = Depends(
     listar_alcaldias = unidades.get_alcaldias(db=db, skip=skip, limit=contador_alcaldias)
     return  listar_alcaldias #Retorna el listado de alcaldias disponibles
 
+if __name__ == "__main__":
+    uvicorn.run("__main__:app", host="127.0.0.1", port=8000, reload=True)
